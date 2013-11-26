@@ -5,7 +5,7 @@ server = net.createServer (connection)->
 
   thisConsole = new ConsoleInterface(connection)
   connection.on 'data', (data) ->
-    thisConsole.writeLocalInput data
+    thisConsole.writeLocal data
 
   connection.on 'close', ->
     console.log('Subscriber disconnected.');

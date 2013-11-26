@@ -7,8 +7,11 @@ module.exports = class ConsoleInterface
     process.stdin.setEncoding('utf8');
 
     process.stdin.on 'data', (data)=>
-      @remote.write "remote: #{data}"
+      @writeRemote data
 
   # Write something to the console.
-  writeLocalInput: (data)->
+  writeLocal: (data)->
     console.log("remote: #{data.toString()}")
+
+  writeRemote: (data)->
+    @remote.write "remote: #{data}"
