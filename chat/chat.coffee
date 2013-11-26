@@ -1,4 +1,3 @@
-fs = require 'fs'
 net = require 'net'
 Iface = require './interface'
 Writer = require './writer'
