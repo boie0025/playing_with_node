@@ -13,7 +13,5 @@ server = net.createServer (connection)->
     console.log('Subscriber disconnected.');
     watcher.close();
 
-
-
 server.listen 5432, ->
   console.log('Listening for subscribers...')
