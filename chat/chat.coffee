@@ -1,10 +1,9 @@
 net = require 'net'
-Iface = require './interface'
-Writer = require './writer'
+ConsoleInterface = require './console_interface'
 
 server = net.createServer (connection)->
 
-  thisConsole = new Iface(connection)
+  thisConsole = new ConsoleInterface(connection)
   connection.on 'data', (data) ->
     thisConsole.writeLocalInput data
 
